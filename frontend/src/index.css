@@ -1,0 +1,114 @@
+:root {
+  --primary: #e52e71;
+  /* StudentHelpBot Pink */
+  --secondary: #302b63;
+  /* Deep Purple */
+  --accent: #00d4ff;
+  /* Cyan */
+  --success: #3ecf8e;
+  --error: #ff4444;
+  /* Red */
+
+  --bg-dark: #050505;
+  /* Main Background */
+  --bg-card: #151520;
+  /* Card Background */
+
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0ba;
+
+  --font-main: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  /* Rich Dark Gradient */
+  background-attachment: fixed;
+  /* Ensures gradient covers full scroll */
+  color: var(--text-primary);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  min-width: 320px;
+}
+
+#root {
+  width: 100%;
+}
+
+/* Glassmorphism / Modern Card */
+.glass-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Gradient Buttons - Updated to Pink Theme */
+.btn-primary {
+  background: linear-gradient(135deg, #e52e71, #ff5f6d);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(229, 46, 113, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(229, 46, 113, 0.4);
+  filter: brightness(1.1);
+}
+
+/* Modern Input Fields */
+.input-field {
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 0 2px rgba(229, 46, 113, 0.2);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
